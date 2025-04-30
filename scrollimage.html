@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scroll Background Change</title>
+  
+</head>
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+  background-color: bisque;
+  transition: background-image 1s ease-in-out ;
+  background-image: url('flower1.jpg');
+  background-size: 400px ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: black;
+  font-family:  sans-serif;
+  text-align: center;
+}
+
+.space{
+  height: 1000px; 
+}
+
+
+</style>
+<body>
+  <div class="content">
+    <h1>Scroll Down</h1>
+   
+    <div class="space"></div>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function () {
+  const scrollPosition = window.scrollY;
+  const body = document.body;
+
+  if (scrollPosition < 100) {
+    body.style.backgroundImage = "url('https://photographylife.com/wp-content/uploads/2018/11/Moeraki-Boulders-New-Zealand.jpg')";
+  } else if(scrollPosition<150) {
+    body.style.backgroundImage = "url('https://creapills.com/wp-content/uploads/2022/10/dall-e-gratuit-intelligence-artificielle-2.jpg')";
+  }
+  else if (scrollPosition < 200) {
+    body.style.backgroundImage = "url('https://i.pinimg.com/originals/dc/55/a7/dc55a7baa9cbd457221ae6d12d9b1b51.jpg')";
+  } else if (scrollPosition<250) {
+     body.style.backgroundImage = "url('https://img.freepik.com/premium-photo/great-picture-image-will-make-your-work-more-beautiful_987032-102143.jpg')";
+  }
+  else if (scrollPosition < 300){
+    body.style.backgroundImage = "url('https://fileinfo.com/img/ss/xl/jpeg_43-2.jpg')";
+  } 
+  else {
+     body.style.backgroundImage = "url('https://my.alfred.edu/zoom/_images/foster-lake.jpg')";
+  }
+
+  
+});
+
+  </script>
+</body>
+</html>
